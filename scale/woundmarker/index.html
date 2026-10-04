@@ -1,0 +1,2821 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"woundcare-d1gp1bnew8dd20fb5-1302685236.tcloudbaseapp.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="伤口手动标记工具 v3.0 - 全平台适配版                   * {             margin: 0;             padding: 0;             box-sizing: border-box;         }          html {             -webkit-text-siz">
+<meta property="og:type" content="website">
+<meta property="og:title" content="慢伤前沿">
+<meta property="og:url" content="https://woundcare-d1gp1bnew8dd20fb5-1302685236.tcloudbaseapp.com/scale/woundmarker/index.html">
+<meta property="og:site_name" content="慢伤前沿">
+<meta property="og:description" content="伤口手动标记工具 v3.0 - 全平台适配版                   * {             margin: 0;             padding: 0;             box-sizing: border-box;         }          html {             -webkit-text-siz">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-17T04:25:13.554Z">
+<meta property="article:modified_time" content="2026-07-17T04:25:13.554Z">
+<meta property="article:author" content="JL">
+<meta property="article:tag" content="慢性伤口 伤口管理工具">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://woundcare-d1gp1bnew8dd20fb5-1302685236.tcloudbaseapp.com/scale/woundmarker/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://woundcare-d1gp1bnew8dd20fb5-1302685236.tcloudbaseapp.com/scale/woundmarker/index.html","path":"scale/woundmarker/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | 慢伤前沿
+</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js" defer></script>
+  <script async src="https://hm.baidu.com/hm.js?ceda3e1cbc1f0945550af24889351174"></script>
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">慢伤前沿</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">伤口管理量表-Wound Scales</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">🩺 伤口标记与测量工具 v3.0 - 全平台适配版</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">JL</p>
+  <div class="site-description" itemprop="description">分享有用的伤口管理知识</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/scale/">SCALE</a></li>
+          <li>WOUNDMARKER</li>
+  </ul>
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>伤口手动标记工具 v3.0 - 全平台适配版</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', -apple-system, 'PingFang SC', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            overflow-x: hidden;
+            touch-action: manipulation;
+        }
+
+        .app-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a3a5c;
+            padding: 10px 0;
+            font-size: 1.4rem;
+            border-bottom: 3px solid #3498db;
+            margin-bottom: 8px;
+        }
+
+        h1 small {
+            font-size: 0.7rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 12px;
+            align-items: start;
+        }
+
+        /* ========== 工具栏 ========== */
+        .toolbar {
+            background: #fff;
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            position: sticky;
+            top: 6px;
+            z-index: 50;
+        }
+
+        .toolbar-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 8px;
+            border-right: 1px solid #ecf0f1;
+            flex-wrap: wrap;
+        }
+
+        .toolbar-group:last-child {
+            border-right: none;
+        }
+
+        .toolbar label {
+            font-size: 0.8rem;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        .toolbar button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.15s;
+            white-space: nowrap;
+            min-height: 38px;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        .btn-success:hover {
+            background: #1e8449;
+        }
+
+        .btn-danger {
+            background: #e74c3c;
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+
+        .btn-outline {
+            background: #ecf0f1;
+            color: #555;
+            border: 1px solid #bdc3c7;
+        }
+
+        .btn-outline:hover {
+            background: #dfe6e9;
+        }
+
+        .btn-active {
+            background: #3498db !important;
+            color: #fff !important;
+            border-color: #2980b9 !important;
+        }
+
+        .toolbar select,
+        .toolbar input[type="color"],
+        .toolbar input[type="number"] {
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            background: #fff;
+            min-height: 34px;
+        }
+
+        .toolbar input[type="color"] {
+            width: 36px;
+            height: 36px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .toolbar input[type="number"] {
+            width: 60px;
+        }
+
+        /* ========== 画布区域 ========== */
+        .canvas-wrapper {
+            background: #fff;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: relative;
+            touch-action: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #woundCanvas {
+            display: block;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+            cursor: crosshair;
+            touch-action: none;
+        }
+
+        .canvas-container {
+            touch-action: none !important;
+        }
+
+        .canvas-hint {
+            margin-top: 8px;
+            font-size: 0.82rem;
+            color: #7f8c8d;
+            text-align: center;
+            line-height: 1.5;
+            touch-action: manipulation;
+        }
+
+        /* ========== 侧面板（桌面端） ========== */
+        .side-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 92vh;
+            overflow-y: auto;
+        }
+
+        .panel-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 14px 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .panel-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .panel-title .count {
+            font-size: 0.75rem;
+            color: #95a5a6;
+            font-weight: normal;
+            margin-left: auto;
+        }
+
+        /* ========== 标记列表 ========== */
+        .marker-list {
+            max-height: 200px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .marker-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 8px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            border: 1px solid transparent;
+        }
+
+        .marker-item:hover {
+            background: #f0f4f8;
+        }
+
+        .marker-item.selected {
+            background: #eef2f7;
+            border-color: #3498db;
+        }
+
+        .marker-item .color-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .marker-item .actions {
+            margin-left: auto;
+            display: flex;
+            gap: 4px;
+        }
+
+        .marker-item .actions button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            background: #ecf0f1;
+            transition: background 0.15s;
+            min-height: 30px;
+        }
+
+        .marker-item .actions button:hover {
+            background: #dcdfe1;
+        }
+
+        .marker-item .actions .delete-btn:hover {
+            background: #fce4ec;
+            color: #c0392b;
+        }
+
+        /* ========== 属性编辑 ========== */
+        .prop-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+        }
+
+        .prop-row label {
+            min-width: 50px;
+            color: #555;
+        }
+
+        .prop-row select,
+        .prop-row input[type="color"],
+        .prop-row input[type="number"],
+        .prop-row input[type="text"] {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            background: #fff;
+            min-height: 34px;
+        }
+
+        .prop-row input[type="color"] {
+            width: 34px;
+            height: 34px;
+            padding: 2px;
+        }
+
+        .prop-row input[type="number"] {
+            width: 60px;
+        }
+
+        .prop-row input[type="range"] {
+            flex: 1;
+            min-width: 100px;
+            min-height: 30px;
+        }
+
+        .prop-row .value-display {
+            font-weight: 600;
+            color: #2c3e50;
+            min-width: 60px;
+        }
+
+        .empty-state {
+            color: #95a5a6;
+            font-size: 0.82rem;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .output-area {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 10px 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .output-area textarea {
+            width: 100%;
+            height: 80px;
+            border: none;
+            background: transparent;
+            resize: vertical;
+            font-family: monospace;
+            font-size: 0.78rem;
+            padding: 4px;
+            color: #333;
+            outline: none;
+        }
+
+        .scale-tool {
+            background: #fffbe6 !important;
+            border: 1px solid #ffe58f;
+        }
+
+        .scale-tool .prop-row {
+            margin: 4px 0;
+        }
+
+        .name-label-preview,
+        .area-label-preview {
+            margin-top: 8px;
+            padding: 6px;
+            border-radius: 6px;
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .name-label-preview span,
+        .area-label-preview span {
+            font-weight: bold;
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .area-label-preview span {
+            background: #e3f2fd;
+        }
+
+        /* ========== 平板与手机适配 ========== */
+        @media (max-width: 1023px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .side-panel {
+                max-height: none;
+                overflow-y: visible;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: start;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .app-container {
+                padding: 8px;
+            }
+
+            h1 {
+                font-size: 1.1rem;
+                padding: 6px 0;
+            }
+
+            .side-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .toolbar {
+                padding: 8px;
+                gap: 6px;
+                top: 4px;
+            }
+
+            .toolbar-group {
+                padding: 0 6px;
+                gap: 4px;
+            }
+
+            .toolbar button {
+                padding: 8px 12px;
+                font-size: 0.88rem;
+                min-height: 42px;
+            }
+
+            .canvas-wrapper {
+                padding: 8px;
+            }
+
+            .canvas-hint {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* 触屏设备加大可点区域 */
+        @media (pointer: coarse) {
+            .toolbar button {
+                min-height: 44px;
+            }
+
+            .prop-row input[type="checkbox"] {
+                width: 22px;
+                height: 22px;
+            }
+
+            .marker-item {
+                padding: 12px 8px;
+            }
+        }
+
+        /* ========== 可折叠面板（移动端使用 details 实现） ========== */
+        details.panel-card>summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2c3e50;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        details.panel-card>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.panel-card>summary::after {
+            content: '▼';
+            margin-left: auto;
+            font-size: 0.7rem;
+            color: #95a5a6;
+            transition: transform 0.2s;
+        }
+
+        details.panel-card:not([open])>summary::after {
+            transform: rotate(-90deg);
+        }
+
+        details.panel-card>summary .count {
+            font-size: 0.75rem;
+            color: #95a5a6;
+            font-weight: normal;
+        }
+
+        details.panel-card .panel-body {
+            margin-top: 10px;
+        }
+
+        /* 桌面端：面板默认展开，隐藏折叠箭头 */
+        @media (min-width: 1024px) {
+            details.panel-card>summary::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <h1>🩺 伤口标记与测量工具 <small>v3.0 - 全平台适配版</small></h1>
+
+        <div class="main-grid">
+            <!-- 左侧：画布 -->
+            <div>
+                <div class="toolbar">
+                    <div class="toolbar-group">
+                        <button class="btn-primary" id="uploadBtn">📁 上传</button>
+                        <input type="file" id="fileInput" accept="image/*" style="display:none">
+                    </div>
+                    <div class="toolbar-group">
+                        <label>✏️ 工具:</label>
+                        <button class="btn-outline" id="toolSelect" onclick="setTool('select')">选择</button>
+                        <button class="btn-outline" id="toolDraw" onclick="setTool('draw')">绘制</button>
+                        <button class="btn-outline" id="toolLine" onclick="setTool('line')">直线</button>
+                        <button class="btn-outline" id="toolCalibrate" onclick="setTool('calibrate')">标定</button>
+                        <button class="btn-outline" id="toolDelete" onclick="setTool('delete')">删除</button>
+                    </div>
+                    <div class="toolbar-group" id="drawOptions" style="display:none;">
+                        <label>线型:</label>
+                        <select id="lineType" onchange="updateDrawStyle()">
+                            <option value="solid">实线</option>
+                            <option value="dashed">虚线</option>
+                            <option value="dotted">点线</option>
+                        </select>
+                        <label>颜色:</label>
+                        <input type="color" id="lineColor" value="#3498db" onchange="updateDrawStyle()">
+                        <label>宽度:</label>
+                        <input type="number" id="lineWidth" value="3" min="1" max="10" step="0.5"
+                            onchange="updateDrawStyle()">
+                    </div>
+                    <div class="toolbar-group">
+                        <button class="btn-danger" onclick="clearCanvas()">🗑️ 清空</button>
+                        <button class="btn-success" onclick="exportImage()">💾 导出</button>
+                        <button class="btn-outline" onclick="undoLast()">↩ 撤销</button>
+                    </div>
+                    <div class="toolbar-group">
+                        <label>🔍 缩放:</label>
+                        <button class="btn-outline" onclick="zoomIn()">+</button>
+                        <span id="zoomLevel" style="padding:0 8px;font-size:0.85rem;">100%</span>
+                        <button class="btn-outline" onclick="zoomOut()">-</button>
+                        <button class="btn-outline" onclick="fitToCanvas()">适应画布</button>
+                        <button class="btn-outline" onclick="resetZoom()">原始大小</button>
+                    </div>
+                </div>
+
+                <div class="canvas-wrapper" id="canvasWrapper">
+                    <canvas id="woundCanvas" width="320" height="240"></canvas>
+                    <div class="canvas-hint" id="canvasHint">
+                        💡 上传图片 → 先使用「标定」工具校准伤口尺 → 再使用「绘制」工具标记伤口
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：控制面板 -->
+            <div class="side-panel">
+                <!-- 伤口尺标定 -->
+                <details class="panel-card scale-tool" id="scalePanel" open>
+                    <summary>📏 伤口尺标定 <span
+                            style="font-size:0.7rem;color:#888;font-weight:normal;">（重要：先标定再测量）</span></summary>
+                    <div class="panel-body">
+                        <div class="prop-row">
+                            <label style="min-width:70px;">标定状态:</label>
+                            <span id="calibrationStatus" style="color:#e74c3c;font-weight:600;">未标定</span>
+                        </div>
+                        <div class="prop-row">
+                            <label style="min-width:70px;">操作步骤:</label>
+                            <span style="color:#555;font-size:0.78rem;" id="calibrateSteps">选择「标定」工具 → 点击伤口尺两端</span>
+                        </div>
+                        <div class="prop-row">
+                            <label style="min-width:70px;">已知长度:</label>
+                            <input type="number" id="knownLength" value="1" min="0.1" step="0.1" style="width:60px;">
+                            <select id="lengthUnit" style="width:60px;">
+                                <option value="cm">cm</option>
+                                <option value="mm">mm</option>
+                                <option value="inch">inch</option>
+                            </select>
+                            <button class="btn-outline" onclick="clearCalibration()"
+                                style="font-size:0.78rem;padding:6px 10px;">重置</button>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 尺寸测量 -->
+                <details class="panel-card" open>
+                    <summary>📐 尺寸测量 <span
+                            style="font-size:0.7rem;color:#888;font-weight:normal;">（选择标记后自动计算）</span></summary>
+                    <div class="panel-body">
+                        <div class="prop-row">
+                            <label>显示尺寸线:</label>
+                            <input type="checkbox" id="showMeasureLines" checked onchange="toggleMeasureLines()">
+                        </div>
+                        <div class="prop-row">
+                            <label>标注颜色:</label>
+                            <input type="color" id="measureColor" value="#e74c3c" onchange="updateMeasureColor()">
+                        </div>
+                        <div class="prop-row">
+                            <label>字体大小:</label>
+                            <input type="number" id="measureFontSize" value="12" min="8" max="36"
+                                onchange="updateMeasureStyle()" style="width:55px;">
+                            <span style="color:#888;">px</span>
+                        </div>
+                        <div id="measurementDisplay">
+                            <div class="prop-row">
+                                <label>长度:</label>
+                                <span class="value-display" id="measureWidth">-</span>
+                                <span style="color:#888;font-size:0.75rem;" id="widthUnit">px</span>
+                            </div>
+                            <div class="prop-row">
+                                <label>宽度:</label>
+                                <span class="value-display" id="measureHeight">-</span>
+                                <span style="color:#888;font-size:0.75rem;" id="heightUnit">px</span>
+                            </div>
+                            <div class="prop-row">
+                                <label>面积:</label>
+                                <span class="value-display" id="measureArea">-</span>
+                                <span style="color:#888;font-size:0.75rem;" id="areaUnit">px²</span>
+                            </div>
+                            <div class="prop-row">
+                                <label>周长:</label>
+                                <span class="value-display" id="measurePerimeter">-</span>
+                                <span style="color:#888;font-size:0.75rem;" id="perimeterUnit">px</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 标记属性 -->
+                <details class="panel-card" open>
+                    <summary>🎨 标记属性</summary>
+                    <div class="panel-body">
+                        <div class="prop-row">
+                            <label>名称:</label>
+                            <input type="text" id="markerName" placeholder="输入标记名称..."
+                                style="flex:1;min-width:120px;padding:6px 8px;border:1px solid #ccc;border-radius:5px;font-size:0.85rem;">
+                            <button class="btn-primary" onclick="applyName()"
+                                style="padding:6px 12px;font-size:0.82rem;">应用</button>
+                        </div>
+                        <div class="prop-row" style="border-top:1px solid #eee;padding-top:8px;margin-top:8px;">
+                            <label>显示名称:</label>
+                            <input type="checkbox" id="showNameLabel" checked onchange="toggleNameDisplay()">
+                            <span style="color:#888;font-size:0.78rem;">在图像上显示名称</span>
+                        </div>
+                        <div class="prop-row">
+                            <label>线型:</label>
+                            <select id="propLineType" onchange="applyStyle()">
+                                <option value="solid">实线</option>
+                                <option value="dashed">虚线</option>
+                                <option value="dotted">点线</option>
+                            </select>
+                        </div>
+                        <div class="prop-row">
+                            <label>颜色:</label>
+                            <input type="color" id="propColor" onchange="applyStyle()">
+                        </div>
+                        <div class="prop-row">
+                            <label>宽度:</label>
+                            <input type="number" id="propWidth" value="3" min="1" max="10" step="0.5"
+                                onchange="applyStyle()" style="width:55px;">
+                        </div>
+                        <div class="prop-row">
+                            <label>透明度:</label>
+                            <input type="range" id="propOpacity" min="0.1" max="1" step="0.1" value="1"
+                                oninput="applyStyle(); this.nextElementSibling.textContent=this.value">
+                            <span style="font-size:0.78rem;color:#888;">1.0</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 名称样式 -->
+                <details class="panel-card">
+                    <summary>📝 标记名称样式 <span
+                            style="font-size:0.7rem;color:#888;font-weight:normal;">（选中标记后生效）</span></summary>
+                    <div class="panel-body">
+                        <div class="prop-row">
+                            <label>字体大小:</label>
+                            <input type="number" id="nameFontSize" value="14" min="8" max="48"
+                                onchange="updateNameStyle()" style="width:55px;">
+                            <span style="color:#888;">px</span>
+                        </div>
+                        <div class="prop-row">
+                            <label>字体颜色:</label>
+                            <input type="color" id="nameColor" value="#333333" onchange="updateNameStyle()">
+                        </div>
+                        <div class="prop-row">
+                            <label>背景透明:</label>
+                            <input type="range" id="nameBgOpacity" min="0" max="1" step="0.1" value="0.6"
+                                oninput="updateNameStyle(); this.nextElementSibling.textContent=this.value">
+                            <span style="font-size:0.78rem;color:#888;">0.6</span>
+                        </div>
+                        <div class="name-label-preview">
+                            <span id="namePreview">伤口标记</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 面积标签样式 -->
+                <details class="panel-card">
+                    <summary>📊 面积标签样式 <span
+                            style="font-size:0.7rem;color:#888;font-weight:normal;">（选中标记后生效）</span></summary>
+                    <div class="panel-body">
+                        <div class="prop-row">
+                            <label>显示面积:</label>
+                            <input type="checkbox" id="showAreaLabel" checked onchange="toggleAreaLabel()">
+                        </div>
+                        <div class="prop-row">
+                            <label>字体大小:</label>
+                            <input type="number" id="areaFontSize" value="12" min="8" max="36"
+                                onchange="updateAreaStyle()" style="width:55px;">
+                            <span style="color:#888;">px</span>
+                        </div>
+                        <div class="prop-row">
+                            <label>字体颜色:</label>
+                            <input type="color" id="areaColor" value="#e74c3c" onchange="updateAreaStyle()">
+                        </div>
+                        <div class="prop-row">
+                            <label>背景透明:</label>
+                            <input type="range" id="areaBgOpacity" min="0" max="1" step="0.1" value="0.6"
+                                oninput="updateAreaStyle(); this.nextElementSibling.textContent=this.value">
+                            <span style="font-size:0.78rem;color:#888;">0.6</span>
+                        </div>
+                        <div class="area-label-preview">
+                            <span id="areaPreview">5.2cm²</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 标记列表 -->
+                <details class="panel-card" open>
+                    <summary>📋 标记列表 <span class="count" id="markerCount">0</span></summary>
+                    <div class="panel-body">
+                        <div class="marker-list" id="markerList">
+                            <div class="empty-state">暂无标记，请使用绘制工具添加</div>
+                        </div>
+                        <div style="margin-top:8px;display:flex;gap:6px;">
+                            <button class="btn-outline" onclick="selectAll()" style="flex:1;">全选</button>
+                            <button class="btn-outline" onclick="deleteSelected()"
+                                style="flex:1;color:#e74c3c;">删除选中</button>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 统计和导出 -->
+                <details class="panel-card" open>
+                    <summary>📊 统计与导出</summary>
+                    <div class="panel-body">
+                        <div id="statsContent" style="font-size:0.85rem;color:#555;">
+                            <div>标记总数: <span id="statTotal">0</span></div>
+                            <div>路径标记: <span id="statPaths">0</span></div>
+                            <div>直线标记: <span id="statLines">0</span></div>
+                        </div>
+                        <div style="display:flex;gap:6px;margin-top:8px;">
+                            <button class="btn-success" onclick="generateReport()"
+                                style="flex:1;padding:8px;border:none;border-radius:6px;cursor:pointer;font-size:0.85rem;min-height:40px;">📄
+                                生成报告</button>
+                            <button class="btn-outline" onclick="copyReport()"
+                                style="flex:1;padding:8px;border:none;border-radius:6px;cursor:pointer;font-size:0.85rem;min-height:40px;">📋
+                                复制</button>
+                        </div>
+                        <div class="output-area" style="margin-top:6px;">
+                            <textarea id="clinicalDesc" readonly placeholder="生成的报告显示在这里..."></textarea>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== 设备检测 ==========
+        const isTouchDevice = ('ontouchstart' in window) ||
+            (window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+
+        // ========== Fabric.js 初始化 ==========
+        const fabricCanvas = new fabric.Canvas('woundCanvas', {
+            isDrawingMode: false,
+            selection: true,
+            preserveObjectStacking: true,
+            backgroundColor: '#fafafa',
+            allowTouchScrolling: false,   // 画布内禁用页面滚动，保证触摸绘制
+            enableRetinaScaling: true
+        });
+
+        // ========== 全局状态 ==========
+        let currentTool = 'select';
+        let backgroundImage = null;
+        let markerNameCounter = 0;
+        let markers = [];
+
+        let calibrationData = {
+            calibrated: false,
+            pixelsPerCm: 0,
+            lineObject: null
+        };
+
+        let measureLines = [];
+
+        // 两点/拖拽绘制状态（直线和标定）
+        let lineDrawingState = {
+            isDrawing: false,
+            startPoint: null,
+            tempLine: null,
+            mode: null          // 'click'（鼠标两次点击）或 'drag'（触摸拖拽）
+        };
+
+        // 空格键拖拽状态（桌面端）
+        let isPanning = false;
+        let lastPos = null;
+
+        let currentMeasureColor = '#e74c3c';
+        let showAreaLabel = true;
+
+        // 双击/双重点击重命名检测
+        let lastTapInfo = { time: 0, target: null };
+
+        // ========== 工具函数 ==========
+        function isTouchEvent(e) {
+            return e && (e.type === 'touchstart' || e.type === 'touchmove' || e.type === 'touchend' ||
+                (e.pointerType && e.pointerType === 'touch'));
+        }
+
+        function getStrokeDashArray(lineType) {
+            switch (lineType) {
+                case 'solid': return [];
+                case 'dashed': return [8, 4];
+                case 'dotted': return [2, 4];
+                default: return [];
+            }
+        }
+
+        function getDrawStyle() {
+            const lineType = document.getElementById('lineType').value;
+            const color = document.getElementById('lineColor').value;
+            const width = parseFloat(document.getElementById('lineWidth').value) || 3;
+            return {
+                stroke: color,
+                strokeWidth: width,
+                strokeDashArray: getStrokeDashArray(lineType),
+                fill: null,
+                opacity: 1
+            };
+        }
+
+        // ========== 设置工具 ==========
+        function setTool(tool) {
+            cancelTempLine();
+
+            currentTool = tool;
+
+            document.querySelectorAll('[id^="tool"]').forEach(btn => {
+                btn.classList.remove('btn-active');
+                btn.classList.add('btn-outline');
+            });
+
+            const btnMap = {
+                select: 'toolSelect', draw: 'toolDraw', line: 'toolLine',
+                calibrate: 'toolCalibrate', delete: 'toolDelete'
+            };
+            const activeBtn = document.getElementById(btnMap[tool]);
+            if (activeBtn) {
+                activeBtn.classList.remove('btn-outline');
+                activeBtn.classList.add('btn-active');
+            }
+
+            const drawOptions = document.getElementById('drawOptions');
+            drawOptions.style.display = (tool === 'draw') ? 'flex' : 'none';
+
+            fabricCanvas.isDrawingMode = (tool === 'draw');
+
+            if (tool === 'draw') {
+                const style = getDrawStyle();
+                fabricCanvas.freeDrawingBrush.color = style.stroke;
+                fabricCanvas.freeDrawingBrush.width = style.strokeWidth;
+                fabricCanvas.freeDrawingBrush.strokeDashArray = style.strokeDashArray;
+            }
+
+            fabricCanvas.selection = (tool === 'select');
+            fabricCanvas.skipTargetFind = (tool === 'draw'); // 绘制时跳过对象查找，触摸更流畅
+
+            if (tool === 'delete') {
+                fabricCanvas.defaultCursor = 'not-allowed';
+            } else if (tool === 'line' || tool === 'calibrate') {
+                fabricCanvas.defaultCursor = 'crosshair';
+            } else {
+                fabricCanvas.defaultCursor = 'default';
+            }
+
+            updateHint();
+        }
+
+        function cancelTempLine() {
+            if (lineDrawingState.tempLine) {
+                fabricCanvas.remove(lineDrawingState.tempLine);
+                fabricCanvas.renderAll();
+            }
+            lineDrawingState = { isDrawing: false, startPoint: null, tempLine: null, mode: null };
+        }
+
+        function updateHint() {
+            const hintsMouse = {
+                'select': '💡 点击选择标记，拖动可调整位置。按住空格键拖拽画布，双击标记可重命名',
+                'draw': '💡 在伤口周围拖动绘制边界',
+                'line': '💡 点击起点，再点击终点，测量两点距离',
+                'calibrate': '💡 点击伤口尺一端，再点击另一端进行标定',
+                'delete': '💡 点击标记即可删除'
+            };
+            const hintsTouch = {
+                'select': '💡 点按选择标记，单指拖动调整位置，双指捏合缩放/平移画布，双击标记可重命名',
+                'draw': '💡 单指在伤口周围滑动绘制边界',
+                'line': '💡 按住并拖动：从起点拖到终点后松开，测量两点距离',
+                'calibrate': '💡 按住伤口尺一端，拖到另一端后松开进行标定',
+                'delete': '💡 点按标记即可删除'
+            };
+            const hints = isTouchDevice ? hintsTouch : hintsMouse;
+            document.getElementById('canvasHint').textContent = hints[currentTool] || '💡 选择工具进行操作';
+        }
+
+        // 标定步骤说明按设备调整
+        if (isTouchDevice) {
+            document.getElementById('calibrateSteps').textContent = '选择「标定」工具 → 按住伤口尺一端拖到另一端';
+        }
+
+        // ========== 上传图片 ==========
+        document.getElementById('uploadBtn').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            if (!file.type.startsWith('image/')) {
+                alert('请选择图片文件');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (ev) {
+                const imgUrl = ev.target.result;
+                fabric.Image.fromURL(imgUrl, function (img) {
+                    if (backgroundImage) {
+                        fabricCanvas.remove(backgroundImage);
+                    }
+                    const maxW = fabricCanvas.width * 0.95;
+                    const maxH = fabricCanvas.height * 0.95;
+                    const scale = Math.min(maxW / img.width, maxH / img.height, 1);
+                    img.set({
+                        left: (fabricCanvas.width - img.width * scale) / 2,
+                        top: (fabricCanvas.height - img.height * scale) / 2,
+                        scaleX: scale,
+                        scaleY: scale,
+                        selectable: false,
+                        evented: false,
+                        name: 'background'
+                    });
+                    fabricCanvas.add(img);
+                    fabricCanvas.sendToBack(img);
+                    backgroundImage = img;
+                    resetZoom();
+                    fabricCanvas.renderAll();
+
+                    document.getElementById('canvasHint').textContent = '✅ 图片已上传！请选择「标定」工具校准伤口尺';
+                    document.getElementById('calibrationStatus').textContent = '请标定伤口尺';
+                    document.getElementById('calibrationStatus').style.color = '#e67e22';
+                });
+            };
+            reader.readAsDataURL(file);
+            this.value = ''; // 允许重复选择同一文件
+        });
+
+        // ========== 画布按下事件 ==========
+        fabricCanvas.on('mouse:down', function (opt) {
+            const e = opt.e;
+            const touch = isTouchEvent(e);
+
+            // 空格键拖拽模式（桌面端）
+            if (isPanning && e && e.clientX !== undefined) {
+                lastPos = { x: e.clientX, y: e.clientY };
+                return;
+            }
+
+            // 删除模式
+            if (currentTool === 'delete') {
+                const target = opt.target;
+                if (target && target.name !== 'background' && target.name !== 'calibration_label' &&
+                    target.name !== 'calibration_line' &&
+                    !target.name?.startsWith('measure_') && !target.name?.startsWith('name_label') &&
+                    !target.name?.startsWith('area_label')) {
+                    if (confirm('确定删除标记 "' + (target.name || '未命名') + '" 吗？')) {
+                        removeNameLabel(target);
+                        removeAreaLabel(target);
+                        if (target.associatedTextId) {
+                            const textObj = fabricCanvas.getObjects().find(t => t.name === target.associatedTextId);
+                            if (textObj) fabricCanvas.remove(textObj);
+                        }
+                        fabricCanvas.remove(target);
+                        updateMarkerList();
+                        updateStats();
+                        clearProperties();
+                        clearMeasurement();
+                    }
+                }
+                return;
+            }
+
+            // 直线测量和标定
+            if (currentTool === 'line' || currentTool === 'calibrate') {
+                const pointer = fabricCanvas.getPointer(e);
+
+                if (touch) {
+                    // 触屏：拖拽模式 —— 按下确定起点，拖动预览，松开完成
+                    if (!lineDrawingState.isDrawing) {
+                        startLinePreview(pointer);
+                        lineDrawingState.mode = 'drag';
+                    }
+                } else {
+                    // 鼠标：两次点击模式
+                    if (!lineDrawingState.isDrawing) {
+                        startLinePreview(pointer);
+                        lineDrawingState.mode = 'click';
+                    } else {
+                        finishLine(pointer);
+                    }
+                }
+                return;
+            }
+
+            // 触屏双击重命名（选择工具下）
+            if (touch && currentTool === 'select' && opt.target && opt.target.markerType) {
+                const now = Date.now();
+                if (lastTapInfo.target === opt.target && (now - lastTapInfo.time) < 400) {
+                    renameObject(opt.target);
+                    lastTapInfo = { time: 0, target: null };
+                } else {
+                    lastTapInfo = { time: now, target: opt.target };
+                }
+            }
+        });
+
+        function startLinePreview(pointer) {
+            lineDrawingState.isDrawing = true;
+            lineDrawingState.startPoint = { x: pointer.x, y: pointer.y };
+
+            const tempLine = new fabric.Line([pointer.x, pointer.y, pointer.x, pointer.y], {
+                stroke: currentTool === 'calibrate' ? '#e74c3c' : '#3498db',
+                strokeWidth: currentTool === 'calibrate' ? 2 : 3,
+                strokeDashArray: currentTool === 'calibrate' ? [4, 4] : [],
+                selectable: false,
+                evented: false,
+                opacity: 0.6
+            });
+            fabricCanvas.add(tempLine);
+            lineDrawingState.tempLine = tempLine;
+        }
+
+        function finishLine(pointer) {
+            const startPoint = lineDrawingState.startPoint;
+            const endPoint = { x: pointer.x, y: pointer.y };
+
+            if (lineDrawingState.tempLine) {
+                fabricCanvas.remove(lineDrawingState.tempLine);
+            }
+
+            // 触屏拖拽距离过短视为误触，取消
+            const dragDist = Math.sqrt((endPoint.x - startPoint.x) ** 2 + (endPoint.y - startPoint.y) ** 2);
+            if (lineDrawingState.mode === 'drag' && dragDist < 5) {
+                lineDrawingState = { isDrawing: false, startPoint: null, tempLine: null, mode: null };
+                fabricCanvas.renderAll();
+                return;
+            }
+
+            const line = new fabric.Line([startPoint.x, startPoint.y, endPoint.x, endPoint.y], {
+                stroke: currentTool === 'calibrate' ? '#e74c3c' : (document.getElementById('lineColor')?.value || '#3498db'),
+                strokeWidth: currentTool === 'calibrate' ? 2 : (parseFloat(document.getElementById('lineWidth')?.value) || 3),
+                strokeDashArray: currentTool === 'calibrate' ? [4, 4] : [],
+                selectable: currentTool !== 'calibrate',
+                evented: currentTool !== 'calibrate',
+                name: currentTool === 'calibrate' ? 'calibration_line' : '测量线_' + (++markerNameCounter),
+                markerType: currentTool === 'calibrate' ? 'calibration' : 'line',
+                markerId: (currentTool === 'calibrate' ? 'cal_' : 'line_') + Date.now(),
+                startPoint: startPoint,
+                endPoint: endPoint
+            });
+
+            fabricCanvas.add(line);
+
+            if (currentTool === 'calibrate') {
+                handleCalibration(line, startPoint, endPoint);
+            } else {
+                handleLineMeasurement(line, startPoint, endPoint);
+            }
+
+            lineDrawingState = { isDrawing: false, startPoint: null, tempLine: null, mode: null };
+        }
+
+        // ========== 移动事件 ==========
+        fabricCanvas.on('mouse:move', function (opt) {
+            // 空格键拖拽（桌面端）
+            if (isPanning && lastPos && opt.e && opt.e.clientX !== undefined) {
+                const deltaX = opt.e.clientX - lastPos.x;
+                const deltaY = opt.e.clientY - lastPos.y;
+                const vpt = fabricCanvas.viewportTransform;
+                vpt[4] += deltaX;
+                vpt[5] += deltaY;
+                fabricCanvas.renderAll();
+                lastPos = { x: opt.e.clientX, y: opt.e.clientY };
+                return;
+            }
+
+            // 更新临时预览线
+            if (lineDrawingState.isDrawing && lineDrawingState.tempLine && opt.e) {
+                const pointer = fabricCanvas.getPointer(opt.e);
+                lineDrawingState.tempLine.set({ x2: pointer.x, y2: pointer.y });
+                fabricCanvas.renderAll();
+            }
+        });
+
+        fabricCanvas.on('mouse:up', function (opt) {
+            if (isPanning) {
+                lastPos = null;
+                return;
+            }
+
+            // 触屏拖拽模式下松开手指 → 完成直线/标定
+            if (lineDrawingState.isDrawing && lineDrawingState.mode === 'drag' &&
+                (currentTool === 'line' || currentTool === 'calibrate')) {
+                const pointer = fabricCanvas.getPointer(opt.e);
+                finishLine(pointer);
+            }
+        });
+
+        // ========== 双指手势：捏合缩放 + 双指平移 ==========
+        (function setupTouchGestures() {
+            const upper = fabricCanvas.upperCanvasEl;
+            let gesture = null;
+            let savedDrawingMode = false;
+            let savedSelection = true;
+
+            function getTouchCanvasPoint(t) {
+                const rect = upper.getBoundingClientRect();
+                return {
+                    x: (t.clientX - rect.left) * (fabricCanvas.width / rect.width),
+                    y: (t.clientY - rect.top) * (fabricCanvas.height / rect.height)
+                };
+            }
+
+            upper.addEventListener('touchstart', function (e) {
+                if (e.touches.length === 2) {
+                    e.preventDefault();
+                    // 取消未完成的临时线
+                    cancelTempLine();
+                    const p1 = getTouchCanvasPoint(e.touches[0]);
+                    const p2 = getTouchCanvasPoint(e.touches[1]);
+                    gesture = {
+                        startDist: Math.hypot(p2.x - p1.x, p2.y - p1.y),
+                        lastMid: { x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2 },
+                        startZoom: fabricCanvas.getZoom()
+                    };
+                    savedDrawingMode = fabricCanvas.isDrawingMode;
+                    savedSelection = fabricCanvas.selection;
+                    fabricCanvas.isDrawingMode = false;
+                    fabricCanvas.selection = false;
+                }
+            }, { passive: false });
+
+            upper.addEventListener('touchmove', function (e) {
+                if (gesture && e.touches.length === 2) {
+                    e.preventDefault();
+                    const p1 = getTouchCanvasPoint(e.touches[0]);
+                    const p2 = getTouchCanvasPoint(e.touches[1]);
+                    const dist = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+                    const mid = { x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2 };
+
+                    // 平移
+                    const vpt = fabricCanvas.viewportTransform;
+                    vpt[4] += (mid.x - gesture.lastMid.x);
+                    vpt[5] += (mid.y - gesture.lastMid.y);
+                    gesture.lastMid = mid;
+
+                    // 缩放（以双指中心为锚点）
+                    let newZoom = gesture.startZoom * (dist / gesture.startDist);
+                    newZoom = Math.max(0.2, Math.min(15, newZoom));
+                    fabricCanvas.zoomToPoint(new fabric.Point(mid.x, mid.y), newZoom);
+
+                    currentZoom = fabricCanvas.getZoom();
+                    document.getElementById('zoomLevel').textContent = Math.round(currentZoom * 100) + '%';
+                    fabricCanvas.requestRenderAll();
+                }
+            }, { passive: false });
+
+            function endGesture(e) {
+                if (gesture && e.touches.length < 2) {
+                    gesture = null;
+                    if (currentTool === 'draw') {
+                        fabricCanvas.isDrawingMode = savedDrawingMode;
+                    }
+                    fabricCanvas.selection = (currentTool === 'select');
+                }
+            }
+
+            upper.addEventListener('touchend', endGesture);
+            upper.addEventListener('touchcancel', endGesture);
+        })();
+    </script>
+
+    <script>
+        // ========== 直线测量处理 ==========
+        function handleLineMeasurement(line, startPoint, endPoint) {
+            const length = Math.sqrt((endPoint.x - startPoint.x) ** 2 + (endPoint.y - startPoint.y) ** 2);
+
+            if (length < 1) {
+                fabricCanvas.remove(line);
+                return;
+            }
+
+            const midX = (startPoint.x + endPoint.x) / 2;
+            const midY = (startPoint.y + endPoint.y) / 2;
+
+            let displayLength = length.toFixed(0) + 'px';
+            if (calibrationData.calibrated) {
+                const cmLength = length / calibrationData.pixelsPerCm;
+                displayLength = cmLength.toFixed(1) + 'cm';
+            }
+
+            const text = new fabric.Text(displayLength, {
+                left: midX,
+                top: midY - 15,
+                fontSize: 12,
+                fill: line.stroke || '#333',
+                selectable: false,
+                evented: false,
+                name: 'measure_text_' + line.markerId,
+                originX: 'center',
+                originY: 'bottom',
+                fontWeight: 'bold',
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                padding: 2
+            });
+
+            line.associatedTextId = text.name;
+            text.associatedLineId = line.markerId;
+
+            fabricCanvas.add(text);
+            fabricCanvas.setActiveObject(line);
+
+            updateMarkerList();
+            updateStats();
+
+            if (document.getElementById('showNameLabel')?.checked) {
+                createNameLabel(line);
+            }
+
+            setTool('select');
+        }
+
+        // ========== 标定处理 ==========
+        function handleCalibration(line, startPoint, endPoint) {
+            const pixelLength = Math.sqrt((endPoint.x - startPoint.x) ** 2 + (endPoint.y - startPoint.y) ** 2);
+
+            if (pixelLength < 5) {
+                alert('标定距离太短，请重新标定');
+                fabricCanvas.remove(line);
+                return;
+            }
+
+            // 清除旧标定线
+            if (calibrationData.lineObject) {
+                fabricCanvas.remove(calibrationData.lineObject.line);
+                fabricCanvas.remove(calibrationData.lineObject.text);
+            }
+
+            const knownLength = parseFloat(document.getElementById('knownLength').value) || 1;
+            const unit = document.getElementById('lengthUnit').value;
+
+            calibrationData.pixelsPerCm = pixelLength / knownLength;
+            calibrationData.calibrated = true;
+
+            const midX = (startPoint.x + endPoint.x) / 2;
+            const midY = (startPoint.y + endPoint.y) / 2;
+            const labelText = knownLength + unit + ' = ' + pixelLength.toFixed(0) + 'px';
+
+            const text = new fabric.Text(labelText, {
+                left: midX,
+                top: midY - 20,
+                fontSize: 14,
+                fill: '#e74c3c',
+                selectable: false,
+                evented: false,
+                name: 'calibration_label',
+                fontWeight: 'bold',
+                originX: 'center',
+                originY: 'bottom',
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                padding: 4
+            });
+
+            fabricCanvas.add(text);
+            calibrationData.lineObject = { line: line, text: text };
+
+            document.getElementById('calibrationStatus').textContent =
+                '✅ 已标定: 1' + unit + ' = ' + calibrationData.pixelsPerCm.toFixed(0) + 'px';
+            document.getElementById('calibrationStatus').style.color = '#27ae60';
+
+            updateAllMeasurements();
+            setTool('select');
+            fabricCanvas.renderAll();
+        }
+
+        // ========== 自由绘制路径处理 ==========
+        fabricCanvas.on('path:created', function (e) {
+            if (currentTool !== 'draw') return;
+
+            const path = e.path;
+            markerNameCounter++;
+            const name = document.getElementById('markerName').value.trim() || '标记_' + markerNameCounter;
+
+            path.set({
+                name: name,
+                markerType: 'path',
+                markerId: 'marker_' + Date.now() + '_' + markerNameCounter,
+                nameStyle: {
+                    fontSize: 14,
+                    color: '#333333',
+                    bgOpacity: 0.6
+                },
+                areaStyle: {
+                    fontSize: 12,
+                    color: '#e74c3c',
+                    bgOpacity: 0.6
+                }
+            });
+
+            // 双击修改名称（桌面端）
+            path.on('mousedblclick', function () {
+                renameObject(this);
+            });
+
+            markers.push(path);
+            updateMarkerList();
+            updateStats();
+
+            fabricCanvas.setActiveObject(path);
+            fabricCanvas.renderAll();
+            loadProperties(path);
+            updateMeasurement(path);
+
+            if (document.getElementById('showNameLabel')?.checked) {
+                createNameLabel(path);
+            }
+
+            if (showAreaLabel && document.getElementById('showAreaLabel').checked) {
+                createAreaLabel(path);
+            }
+
+            setTool('select');
+        });
+
+        // 统一的重命名入口（桌面双击 / 触屏双击 / 列表按钮共用）
+        function renameObject(obj) {
+            const newName = prompt('修改标记名称:', obj.name || '');
+            if (newName) {
+                obj.set('name', newName);
+                fabricCanvas.renderAll();
+                updateMarkerList();
+                if (document.getElementById('showNameLabel').checked) {
+                    createNameLabel(obj);
+                }
+            }
+        }
+
+        // ========== 测量计算（Shoelace Formula） ==========
+        function measureObject(obj) {
+            if (!obj) return null;
+
+            if (obj.markerType === 'line' || obj.type === 'line') {
+                const x1 = obj.x1 || 0, y1 = obj.y1 || 0;
+                const x2 = obj.x2 || 0, y2 = obj.y2 || 0;
+                const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+                return {
+                    width: length,
+                    height: 0,
+                    area: 0,
+                    perimeter: length,
+                    length: length,
+                    center: { x: (x1 + x2) / 2, y: (y1 + y2) / 2 },
+                    bounds: { minX: Math.min(x1, x2), minY: Math.min(y1, y2), maxX: Math.max(x1, x2), maxY: Math.max(y1, y2) }
+                };
+            }
+
+            const bounds = obj.getBoundingRect();
+            const width = bounds.width;
+            const height = bounds.height;
+
+            let perimeter = 0;
+            let area = 0;
+
+            if (obj.type === 'path' && obj.path) {
+                const points = extractPathPoints(obj);
+
+                for (let i = 0; i < points.length - 1; i++) {
+                    perimeter += Math.sqrt((points[i + 1].x - points[i].x) ** 2 + (points[i + 1].y - points[i].y) ** 2);
+                }
+                if (points.length > 2) {
+                    perimeter += Math.sqrt((points[0].x - points[points.length - 1].x) ** 2 + (points[0].y - points[points.length - 1].y) ** 2);
+                }
+
+                area = calculatePolygonArea(points);
+            } else {
+                perimeter = (width + height) * 2;
+                area = width * height;
+            }
+
+            return {
+                width: width,
+                height: height,
+                area: area || width * height,
+                perimeter: perimeter || (width + height) * 2,
+                center: { x: bounds.left + width / 2, y: bounds.top + height / 2 },
+                bounds: { minX: bounds.left, minY: bounds.top, maxX: bounds.left + width, maxY: bounds.top + height }
+            };
+        }
+
+        function extractPathPoints(obj) {
+            const points = [];
+            const pathData = obj.path;
+
+            if (!pathData) return points;
+
+            const matrix = obj.calcTransformMatrix();
+
+            for (let i = 0; i < pathData.length; i++) {
+                const cmd = pathData[i];
+                if (!cmd || cmd.length < 3) continue;
+
+                if (cmd[0] === 'M' || cmd[0] === 'L') {
+                    const x = cmd[1];
+                    const y = cmd[2];
+                    const transformed = fabric.util.transformPoint({ x, y }, matrix);
+                    points.push(transformed);
+                } else if (cmd[0] === 'Q' && cmd.length >= 5) {
+                    const x = cmd[3];
+                    const y = cmd[4];
+                    const transformed = fabric.util.transformPoint({ x, y }, matrix);
+                    points.push(transformed);
+                } else if (cmd[0] === 'C' && cmd.length >= 7) {
+                    const x = cmd[5];
+                    const y = cmd[6];
+                    const transformed = fabric.util.transformPoint({ x, y }, matrix);
+                    points.push(transformed);
+                }
+            }
+
+            return points;
+        }
+
+        function calculatePolygonArea(points) {
+            if (points.length < 3) return 0;
+
+            let area = 0;
+            for (let i = 0; i < points.length; i++) {
+                const j = (i + 1) % points.length;
+                area += points[i].x * points[j].y;
+                area -= points[j].x * points[i].y;
+            }
+
+            return Math.abs(area / 2);
+        }
+
+        function updateMeasurement(obj) {
+            if (!obj) {
+                obj = fabricCanvas.getActiveObject();
+            }
+
+            if (!obj || obj.name === 'background' || obj.name === 'calibration_line' ||
+                obj.name === 'calibration_label' || obj.name?.startsWith('measure_') ||
+                obj.name?.startsWith('name_label') || obj.name?.startsWith('area_label')) {
+                clearMeasurement();
+                return;
+            }
+
+            const bounds = measureObject(obj);
+            if (!bounds) return;
+
+            const scale = calibrationData.calibrated ? calibrationData.pixelsPerCm : 1;
+            const unit = calibrationData.calibrated ? 'cm' : 'px';
+            const areaUnit = calibrationData.calibrated ? 'cm²' : 'px²';
+
+            document.getElementById('measureWidth').textContent =
+                calibrationData.calibrated ? (bounds.width / scale).toFixed(1) : bounds.width.toFixed(0);
+            document.getElementById('widthUnit').textContent = unit;
+
+            document.getElementById('measureHeight').textContent =
+                calibrationData.calibrated ? (bounds.height / scale).toFixed(1) : bounds.height.toFixed(0);
+            document.getElementById('heightUnit').textContent = unit;
+
+            document.getElementById('measureArea').textContent =
+                calibrationData.calibrated ? (bounds.area / (scale * scale)).toFixed(1) : bounds.area.toFixed(0);
+            document.getElementById('areaUnit').textContent = areaUnit;
+
+            document.getElementById('measurePerimeter').textContent =
+                calibrationData.calibrated ? (bounds.perimeter / scale).toFixed(1) : bounds.perimeter.toFixed(0);
+            document.getElementById('perimeterUnit').textContent = unit;
+
+            if (document.getElementById('showMeasureLines').checked && obj.markerType === 'path') {
+                drawMeasureLines(obj, bounds);
+            }
+        }
+
+        function clearMeasurement() {
+            document.getElementById('measureWidth').textContent = '-';
+            document.getElementById('measureHeight').textContent = '-';
+            document.getElementById('measureArea').textContent = '-';
+            document.getElementById('measurePerimeter').textContent = '-';
+            removeMeasureLines();
+        }
+
+        function drawMeasureLines(obj, bounds) {
+            removeMeasureLines();
+            if (!bounds) return;
+
+            const scale = calibrationData.calibrated ? calibrationData.pixelsPerCm : 1;
+            const unit = calibrationData.calibrated ? 'cm' : 'px';
+            const padding = 30;
+
+            const hrLine = new fabric.Line([bounds.bounds.minX, bounds.bounds.maxY + padding, bounds.bounds.maxX, bounds.bounds.maxY + padding], {
+                stroke: currentMeasureColor, strokeWidth: 1.5, selectable: false, evented: false,
+                name: 'measure_line', opacity: 0.8
+            });
+
+            const vrLine = new fabric.Line([bounds.bounds.maxX + padding, bounds.bounds.minY, bounds.bounds.maxX + padding, bounds.bounds.maxY], {
+                stroke: currentMeasureColor, strokeWidth: 1.5, selectable: false, evented: false,
+                name: 'measure_line', opacity: 0.8
+            });
+
+            const widthValue = calibrationData.calibrated ?
+                ((bounds.bounds.maxX - bounds.bounds.minX) / scale).toFixed(1) + unit :
+                (bounds.bounds.maxX - bounds.bounds.minX).toFixed(0) + unit;
+
+            const widthText = new fabric.Text(widthValue, {
+                left: (bounds.bounds.minX + bounds.bounds.maxX) / 2,
+                top: bounds.bounds.maxY + padding + 5,
+                fontSize: 12, fill: currentMeasureColor, selectable: false, evented: false,
+                name: 'measure_text', originX: 'center', originY: 'top', fontWeight: 'bold',
+                backgroundColor: 'rgba(255,255,255,0.8)', padding: 2
+            });
+
+            const heightValue = calibrationData.calibrated ?
+                ((bounds.bounds.maxY - bounds.bounds.minY) / scale).toFixed(1) + unit :
+                (bounds.bounds.maxY - bounds.bounds.minY).toFixed(0) + unit;
+
+            const heightText = new fabric.Text(heightValue, {
+                left: bounds.bounds.maxX + padding + 5,
+                top: (bounds.bounds.minY + bounds.bounds.maxY) / 2,
+                fontSize: 12, fill: currentMeasureColor, selectable: false, evented: false,
+                name: 'measure_text', originX: 'left', originY: 'center', fontWeight: 'bold',
+                backgroundColor: 'rgba(255,255,255,0.8)', padding: 2
+            });
+
+            const arrowSize = 6;
+            const hrArrow1 = new fabric.Triangle({ left: bounds.bounds.minX, top: bounds.bounds.maxY + padding, width: arrowSize * 2, height: arrowSize * 2, fill: currentMeasureColor, selectable: false, evented: false, name: 'measure_arrow', angle: 270, originX: 'center', originY: 'center' });
+            const hrArrow2 = new fabric.Triangle({ left: bounds.bounds.maxX, top: bounds.bounds.maxY + padding, width: arrowSize * 2, height: arrowSize * 2, fill: currentMeasureColor, selectable: false, evented: false, name: 'measure_arrow', angle: 90, originX: 'center', originY: 'center' });
+            const vrArrow1 = new fabric.Triangle({ left: bounds.bounds.maxX + padding, top: bounds.bounds.minY, width: arrowSize * 2, height: arrowSize * 2, fill: currentMeasureColor, selectable: false, evented: false, name: 'measure_arrow', angle: 0, originX: 'center', originY: 'center' });
+            const vrArrow2 = new fabric.Triangle({ left: bounds.bounds.maxX + padding, top: bounds.bounds.maxY, width: arrowSize * 2, height: arrowSize * 2, fill: currentMeasureColor, selectable: false, evented: false, name: 'measure_arrow', angle: 180, originX: 'center', originY: 'center' });
+
+            fabricCanvas.add(hrLine, vrLine, widthText, heightText, hrArrow1, hrArrow2, vrArrow1, vrArrow2);
+            measureLines = [hrLine, vrLine, widthText, heightText, hrArrow1, hrArrow2, vrArrow1, vrArrow2];
+            fabricCanvas.renderAll();
+        }
+
+        function removeMeasureLines() {
+            measureLines.forEach(line => fabricCanvas.remove(line));
+            measureLines = [];
+        }
+
+        function toggleMeasureLines() {
+            const show = document.getElementById('showMeasureLines').checked;
+            if (show) {
+                const activeObj = fabricCanvas.getActiveObject();
+                if (activeObj && activeObj.markerType === 'path') {
+                    const bounds = measureObject(activeObj);
+                    if (bounds) drawMeasureLines(activeObj, bounds);
+                }
+            } else {
+                removeMeasureLines();
+            }
+        }
+
+        function updateAllMeasurements() {
+            fabricCanvas.getObjects().forEach(obj => {
+                if (obj.markerType === 'line') {
+                    const x1 = obj.x1 || 0, y1 = obj.y1 || 0;
+                    const x2 = obj.x2 || 0, y2 = obj.y2 || 0;
+                    const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+
+                    const textObj = fabricCanvas.getObjects().find(t => t.associatedLineId === obj.markerId);
+                    if (textObj) {
+                        let displayLength = length.toFixed(0) + 'px';
+                        if (calibrationData.calibrated) {
+                            displayLength = (length / calibrationData.pixelsPerCm).toFixed(1) + 'cm';
+                        }
+                        textObj.set('text', displayLength);
+                    }
+                }
+
+                // 标定后同步更新面积标签
+                if (obj.isAreaLabel) {
+                    const parent = fabricCanvas.getObjects().find(o =>
+                        (o.markerId || o.id) === obj.labelForId && o.markerType === 'path');
+                    if (parent) {
+                        obj.set('text', calculateAreaValue(parent));
+                    }
+                }
+            });
+
+            const activeObj = fabricCanvas.getActiveObject();
+            if (activeObj) {
+                updateMeasurement(activeObj);
+            }
+
+            fabricCanvas.renderAll();
+        }
+
+        function clearCalibration() {
+            if (calibrationData.lineObject) {
+                fabricCanvas.remove(calibrationData.lineObject.line);
+                fabricCanvas.remove(calibrationData.lineObject.text);
+            }
+            calibrationData = { calibrated: false, pixelsPerCm: 0, lineObject: null };
+            document.getElementById('calibrationStatus').textContent = '未标定';
+            document.getElementById('calibrationStatus').style.color = '#e74c3c';
+            updateAllMeasurements();
+            fabricCanvas.renderAll();
+        }
+    </script>
+
+    <script>
+        // ========== 对象修改时更新测量与标签位置 ==========
+        fabricCanvas.on('object:modified', function (e) {
+            const obj = e.target;
+            if (!obj) return;
+
+            // 标签被拖动后，记录相对位置
+            if (obj.isNameLabel || obj.isAreaLabel) {
+                const parent = fabricCanvas.getObjects().find(o =>
+                    (o.markerId || o.id) === obj.labelForId && o.markerType);
+                if (parent) {
+                    const objBounds = parent.getBoundingRect();
+                    if (obj.isAreaLabel) {
+                        obj.relativePosition = {
+                            x: obj.left - objBounds.left - objBounds.width / 2,
+                            y: obj.top - objBounds.top - objBounds.height / 2
+                        };
+                    } else {
+                        obj.relativePosition = {
+                            x: obj.left - objBounds.left - objBounds.width / 2,
+                            y: obj.top - objBounds.top
+                        };
+                    }
+                }
+                return;
+            }
+
+            if (obj.markerType) {
+                updateMeasurement(obj);
+
+                if (obj.markerType === 'line' && obj.associatedTextId) {
+                    const x1 = obj.x1 || 0, y1 = obj.y1 || 0;
+                    const x2 = obj.x2 || 0, y2 = obj.y2 || 0;
+                    const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+
+                    const textObj = fabricCanvas.getObjects().find(t => t.name === obj.associatedTextId);
+                    if (textObj) {
+                        let displayLength = length.toFixed(0) + 'px';
+                        if (calibrationData.calibrated) {
+                            displayLength = (length / calibrationData.pixelsPerCm).toFixed(1) + 'cm';
+                        }
+                        textObj.set({
+                            text: displayLength,
+                            left: (x1 + x2) / 2,
+                            top: (y1 + y2) / 2 - 15
+                        });
+                    }
+                }
+
+                updateNameLabelPosition(obj);
+                updateAreaLabelPosition(obj);
+            }
+        });
+
+        // ========== 选择事件 ==========
+        function handleSelection(obj) {
+            if (obj && obj.name !== 'background' && obj.name !== 'calibration_line' &&
+                obj.name !== 'calibration_label' && !obj.name?.startsWith('measure_') &&
+                !obj.name?.startsWith('name_label') && !obj.name?.startsWith('area_label')) {
+                loadProperties(obj);
+                updateMeasurement(obj);
+
+                if (obj.nameStyle) {
+                    document.getElementById('nameFontSize').value = obj.nameStyle.fontSize;
+                    document.getElementById('nameColor').value = obj.nameStyle.color;
+                    document.getElementById('nameBgOpacity').value = obj.nameStyle.bgOpacity;
+                    updateNameStyle();
+                }
+
+                if (obj.areaStyle) {
+                    document.getElementById('areaFontSize').value = obj.areaStyle.fontSize;
+                    document.getElementById('areaColor').value = obj.areaStyle.color;
+                    document.getElementById('areaBgOpacity').value = obj.areaStyle.bgOpacity;
+                    updateAreaStyle();
+                }
+            }
+            updateMarkerList();
+        }
+
+        fabricCanvas.on('selection:created', function (e) { handleSelection(e.selected[0]); });
+        fabricCanvas.on('selection:updated', function (e) { handleSelection(e.selected[0]); });
+
+        fabricCanvas.on('selection:cleared', function () {
+            clearProperties();
+            clearMeasurement();
+            updateMarkerList();
+        });
+
+        // ========== 属性管理 ==========
+        function loadProperties(obj) {
+            if (!obj || obj.name === 'background' || obj.name === 'calibration_line' ||
+                obj.name === 'calibration_label') return;
+
+            document.getElementById('markerName').value = obj.name || '';
+
+            const dashArray = obj.strokeDashArray || [];
+            let lineType = 'solid';
+            if (dashArray.length > 0) {
+                if (dashArray[0] <= 3) lineType = 'dotted';
+                else lineType = 'dashed';
+            }
+
+            document.getElementById('propLineType').value = lineType;
+            document.getElementById('propColor').value = obj.stroke || '#3498db';
+            document.getElementById('propWidth').value = obj.strokeWidth || 3;
+            document.getElementById('propOpacity').value = obj.opacity || 1;
+            document.getElementById('propOpacity').nextElementSibling.textContent = (obj.opacity || 1).toFixed(1);
+        }
+
+        function clearProperties() {
+            document.getElementById('propLineType').value = 'solid';
+            document.getElementById('propColor').value = '#3498db';
+            document.getElementById('propWidth').value = 3;
+            document.getElementById('propOpacity').value = 1;
+            document.getElementById('propOpacity').nextElementSibling.textContent = '1.0';
+        }
+
+        function applyStyle() {
+            const activeObj = fabricCanvas.getActiveObject();
+            if (!activeObj || activeObj.name === 'background' ||
+                activeObj.name === 'calibration_line' || activeObj.name === 'calibration_label') {
+                return;
+            }
+
+            const lineType = document.getElementById('propLineType').value;
+            const color = document.getElementById('propColor').value;
+            const width = parseFloat(document.getElementById('propWidth').value) || 3;
+            const opacity = parseFloat(document.getElementById('propOpacity').value) || 1;
+
+            activeObj.set({
+                stroke: color,
+                strokeWidth: width,
+                strokeDashArray: getStrokeDashArray(lineType),
+                opacity: opacity
+            });
+
+            fabricCanvas.renderAll();
+            updateMarkerList();
+        }
+
+        function applyName() {
+            const activeObj = fabricCanvas.getActiveObject();
+            if (!activeObj || activeObj.name === 'background' ||
+                activeObj.name === 'calibration_line' || activeObj.name === 'calibration_label') {
+                alert('请先选择一个标记');
+                return;
+            }
+
+            const name = document.getElementById('markerName').value.trim();
+            if (name) {
+                activeObj.set('name', name);
+                fabricCanvas.renderAll();
+                updateMarkerList();
+                if (document.getElementById('showNameLabel').checked) {
+                    createNameLabel(activeObj);
+                }
+            }
+        }
+
+        // ========== 名称标签（鼠标/触摸均可拖动） ==========
+        // 标签使用 Fabric 原生拖拽：桌面鼠标与触屏单指均可直接拖动
+        function makeLabelDraggable(text) {
+            text.set({
+                selectable: true,
+                evented: true,
+                hasControls: false,
+                hasBorders: false,
+                lockScalingX: true,
+                lockScalingY: true,
+                lockRotation: true,
+                hoverCursor: 'move'
+            });
+        }
+
+        function createNameLabel(obj) {
+            removeNameLabel(obj);
+            if (!document.getElementById('showNameLabel').checked) return;
+
+            const name = obj.name || '未命名';
+            const style = obj.nameStyle || {
+                fontSize: 14,
+                color: '#333333',
+                bgOpacity: 0.6
+            };
+
+            const bounds = obj.getBoundingRect();
+
+            const text = new fabric.Text(name, {
+                left: bounds.left + bounds.width / 2,
+                top: bounds.top - 5,
+                fontSize: style.fontSize,
+                fill: style.color,
+                name: 'name_label_' + (obj.markerId || obj.id || Date.now()),
+                originX: 'center',
+                originY: 'bottom',
+                fontWeight: 'bold',
+                backgroundColor: 'rgba(255,255,255,' + style.bgOpacity + ')',
+                padding: 4,
+                labelForId: obj.markerId || obj.id,
+                isNameLabel: true
+            });
+
+            makeLabelDraggable(text);
+            fabricCanvas.add(text);
+            fabricCanvas.renderAll();
+            return text;
+        }
+
+        function removeNameLabel(obj) {
+            const labelId = obj.markerId || obj.id || '';
+            fabricCanvas.getObjects().slice().forEach(o => {
+                if (o.labelForId === labelId && o.isNameLabel) {
+                    fabricCanvas.remove(o);
+                }
+            });
+        }
+
+        function toggleNameDisplay() {
+            const show = document.getElementById('showNameLabel').checked;
+            const objects = fabricCanvas.getObjects().filter(obj =>
+                obj.markerType === 'path' || obj.markerType === 'line'
+            );
+
+            if (show) {
+                objects.forEach(obj => createNameLabel(obj));
+            } else {
+                objects.forEach(obj => removeNameLabel(obj));
+            }
+            fabricCanvas.renderAll();
+        }
+
+        function updateNameLabelPosition(obj) {
+            const label = fabricCanvas.getObjects().find(t =>
+                t.labelForId === (obj.markerId || obj.id) && t.isNameLabel
+            );
+
+            if (label) {
+                const bounds = obj.getBoundingRect();
+
+                if (label.relativePosition) {
+                    label.set({
+                        left: bounds.left + bounds.width / 2 + label.relativePosition.x,
+                        top: bounds.top + label.relativePosition.y
+                    });
+                } else {
+                    label.set({
+                        left: bounds.left + bounds.width / 2,
+                        top: bounds.top - 5
+                    });
+                }
+            }
+        }
+
+        function updateNameStyle() {
+            const fontSize = parseInt(document.getElementById('nameFontSize').value) || 14;
+            const color = document.getElementById('nameColor').value;
+            const bgOpacity = parseFloat(document.getElementById('nameBgOpacity').value) || 0.6;
+
+            const preview = document.getElementById('namePreview');
+            preview.style.fontSize = fontSize + 'px';
+            preview.style.color = color;
+            preview.style.backgroundColor = `rgba(255, 255, 255, ${bgOpacity})`;
+
+            const activeObj = fabricCanvas.getActiveObject();
+            if (activeObj && activeObj.markerType) {
+                activeObj.set('nameStyle', {
+                    fontSize: fontSize,
+                    color: color,
+                    bgOpacity: bgOpacity
+                });
+
+                removeNameLabel(activeObj);
+                createNameLabel(activeObj);
+            }
+
+            fabricCanvas.renderAll();
+        }
+
+        // ========== 面积标签 ==========
+        function createAreaLabel(obj) {
+            removeAreaLabel(obj);
+
+            if (!showAreaLabel || !document.getElementById('showAreaLabel').checked) return;
+
+            const bounds = obj.getBoundingRect();
+            const style = obj.areaStyle || {
+                fontSize: 12,
+                color: '#e74c3c',
+                bgOpacity: 0.6
+            };
+
+            const areaValue = calculateAreaValue(obj);
+
+            const text = new fabric.Text(areaValue, {
+                left: bounds.left + bounds.width / 2,
+                top: bounds.top + bounds.height / 2,
+                fontSize: style.fontSize,
+                fill: style.color,
+                name: 'area_label_' + (obj.markerId || obj.id || Date.now()),
+                originX: 'center',
+                originY: 'center',
+                fontWeight: 'bold',
+                backgroundColor: 'rgba(255,255,255,' + style.bgOpacity + ')',
+                padding: 4,
+                labelForId: obj.markerId || obj.id,
+                isAreaLabel: true
+            });
+
+            makeLabelDraggable(text);
+            fabricCanvas.add(text);
+            fabricCanvas.renderAll();
+            return text;
+        }
+
+        function removeAreaLabel(obj) {
+            const labelId = obj.markerId || obj.id || '';
+            fabricCanvas.getObjects().slice().forEach(o => {
+                if (o.labelForId === labelId && o.isAreaLabel) {
+                    fabricCanvas.remove(o);
+                }
+            });
+        }
+
+        function toggleAreaLabel() {
+            showAreaLabel = document.getElementById('showAreaLabel').checked;
+            const objects = fabricCanvas.getObjects().filter(obj =>
+                obj.markerType === 'path'
+            );
+
+            if (showAreaLabel) {
+                objects.forEach(obj => createAreaLabel(obj));
+            } else {
+                objects.forEach(obj => removeAreaLabel(obj));
+            }
+            fabricCanvas.renderAll();
+        }
+
+        function updateAreaLabelPosition(obj) {
+            const label = fabricCanvas.getObjects().find(t =>
+                t.labelForId === (obj.markerId || obj.id) && t.isAreaLabel
+            );
+
+            if (label) {
+                const bounds = obj.getBoundingRect();
+
+                if (label.relativePosition) {
+                    label.set({
+                        left: bounds.left + bounds.width / 2 + label.relativePosition.x,
+                        top: bounds.top + bounds.height / 2 + label.relativePosition.y
+                    });
+                } else {
+                    label.set({
+                        left: bounds.left + bounds.width / 2,
+                        top: bounds.top + bounds.height / 2
+                    });
+                }
+            }
+        }
+
+        function updateAreaStyle() {
+            const fontSize = parseInt(document.getElementById('areaFontSize').value) || 12;
+            const color = document.getElementById('areaColor').value;
+            const bgOpacity = parseFloat(document.getElementById('areaBgOpacity').value) || 0.6;
+
+            const preview = document.getElementById('areaPreview');
+            preview.style.fontSize = fontSize + 'px';
+            preview.style.color = color;
+            preview.style.backgroundColor = `rgba(255, 255, 255, ${bgOpacity})`;
+
+            const activeObj = fabricCanvas.getActiveObject();
+            if (activeObj && activeObj.markerType) {
+                activeObj.set('areaStyle', {
+                    fontSize: fontSize,
+                    color: color,
+                    bgOpacity: bgOpacity
+                });
+
+                removeAreaLabel(activeObj);
+                createAreaLabel(activeObj);
+            }
+
+            fabricCanvas.renderAll();
+        }
+
+        function calculateAreaValue(obj) {
+            const bounds = measureObject(obj);
+            if (!bounds) return '';
+
+            const scale = calibrationData.calibrated ? calibrationData.pixelsPerCm : 1;
+            const areaValue = calibrationData.calibrated ?
+                (bounds.area / (scale * scale)).toFixed(1) : bounds.area.toFixed(0);
+            const unit = calibrationData.calibrated ? 'cm²' : 'px²';
+
+            return areaValue + unit;
+        }
+
+        // ========== 标记列表 ==========
+        function updateMarkerList() {
+            const list = document.getElementById('markerList');
+            const count = document.getElementById('markerCount');
+
+            const objects = fabricCanvas.getObjects().filter(obj =>
+                obj.markerType === 'path' || obj.markerType === 'line'
+            );
+
+            count.textContent = objects.length;
+            markers = objects;
+
+            if (objects.length === 0) {
+                list.innerHTML = '<div class="empty-state">暂无标记，请使用绘制工具添加</div>';
+                return;
+            }
+
+            let html = '';
+            objects.forEach((obj, index) => {
+                const color = obj.stroke || '#3498db';
+                const name = obj.name || '未命名_' + (index + 1);
+                const type = obj.markerType === 'line' ? '直线' : '路径';
+                const isSelected = fabricCanvas.getActiveObject() === obj;
+
+                html += `
+      <div class="marker-item ${isSelected ? 'selected' : ''}" onclick="selectMarkerByIndex(${index})">
+        <span class="color-dot" style="background:${color}"></span>
+        <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${name}</span>
+        <span style="font-size:0.7rem;color:#95a5a6;">${type}</span>
+        <span class="actions">
+          <button onclick="event.stopPropagation();renameMarker(${index})">✏️</button>
+          <button class="delete-btn" onclick="event.stopPropagation();deleteMarkerByIndex(${index})">🗑️</button>
+        </span>
+      </div>
+    `;
+            });
+
+            list.innerHTML = html;
+        }
+
+        function selectMarkerByIndex(index) {
+            const objects = fabricCanvas.getObjects().filter(obj => obj.markerType === 'path' || obj.markerType === 'line');
+            if (objects[index]) {
+                fabricCanvas.setActiveObject(objects[index]);
+                fabricCanvas.renderAll();
+                loadProperties(objects[index]);
+                updateMeasurement(objects[index]);
+                updateMarkerList();
+            }
+        }
+
+        function renameMarker(index) {
+            const objects = fabricCanvas.getObjects().filter(obj => obj.markerType === 'path' || obj.markerType === 'line');
+            const obj = objects[index];
+            if (obj) {
+                renameObject(obj);
+            }
+        }
+
+        function deleteMarkerByIndex(index) {
+            const objects = fabricCanvas.getObjects().filter(obj => obj.markerType === 'path' || obj.markerType === 'line');
+            const obj = objects[index];
+            if (obj) {
+                if (confirm('确定删除标记 "' + (obj.name || '未命名') + '" 吗？')) {
+                    removeNameLabel(obj);
+                    removeAreaLabel(obj);
+                    if (obj.associatedTextId) {
+                        const textObj = fabricCanvas.getObjects().find(t => t.name === obj.associatedTextId);
+                        if (textObj) fabricCanvas.remove(textObj);
+                    }
+                    fabricCanvas.remove(obj);
+                    updateMarkerList();
+                    updateStats();
+                    clearProperties();
+                    clearMeasurement();
+                }
+            }
+        }
+
+        function selectAll() {
+            const objects = fabricCanvas.getObjects().filter(obj => obj.markerType === 'path' || obj.markerType === 'line');
+            if (objects.length > 0) {
+                const sel = new fabric.ActiveSelection(objects, { canvas: fabricCanvas });
+                fabricCanvas.setActiveObject(sel);
+                fabricCanvas.renderAll();
+            }
+        }
+
+        function deleteSelected() {
+            const activeObj = fabricCanvas.getActiveObject();
+            if (!activeObj) return;
+
+            if (activeObj.type === 'activeselection') {
+                activeObj.getObjects().slice().forEach(obj => {
+                    if (obj.markerType) {
+                        removeNameLabel(obj);
+                        removeAreaLabel(obj);
+                        fabricCanvas.remove(obj);
+                    }
+                });
+            } else if (activeObj.markerType) {
+                removeNameLabel(activeObj);
+                removeAreaLabel(activeObj);
+                if (activeObj.associatedTextId) {
+                    const textObj = fabricCanvas.getObjects().find(t => t.name === activeObj.associatedTextId);
+                    if (textObj) fabricCanvas.remove(textObj);
+                }
+                fabricCanvas.remove(activeObj);
+            }
+
+            fabricCanvas.discardActiveObject();
+            fabricCanvas.renderAll();
+            updateMarkerList();
+            updateStats();
+            clearProperties();
+            clearMeasurement();
+        }
+
+        // ========== 撤销 ==========
+        function undoLast() {
+            const objects = fabricCanvas.getObjects().filter(obj => obj.markerType === 'path' || obj.markerType === 'line');
+            if (objects.length > 0) {
+                const last = objects[objects.length - 1];
+                removeNameLabel(last);
+                removeAreaLabel(last);
+                if (last.associatedTextId) {
+                    const textObj = fabricCanvas.getObjects().find(t => t.name === last.associatedTextId);
+                    if (textObj) fabricCanvas.remove(textObj);
+                }
+                fabricCanvas.remove(last);
+                updateMarkerList();
+                updateStats();
+                clearProperties();
+                clearMeasurement();
+            }
+        }
+
+        // ========== 清空画布 ==========
+        function clearCanvas() {
+            if (confirm('确定要清空所有标记吗？（保留背景图片和标定）')) {
+                const objects = fabricCanvas.getObjects().filter(obj =>
+                    obj.name !== 'background' && obj.name !== 'calibration_line' && obj.name !== 'calibration_label'
+                );
+                objects.forEach(obj => fabricCanvas.remove(obj));
+                fabricCanvas.discardActiveObject();
+                fabricCanvas.renderAll();
+                updateMarkerList();
+                updateStats();
+                clearProperties();
+                clearMeasurement();
+            }
+        }
+
+        // ========== 统计 ==========
+        function updateStats() {
+            const objects = fabricCanvas.getObjects().filter(obj => obj.markerType === 'path' || obj.markerType === 'line');
+            const paths = objects.filter(obj => obj.markerType === 'path');
+            const lines = objects.filter(obj => obj.markerType === 'line');
+
+            document.getElementById('statTotal').textContent = objects.length;
+            document.getElementById('statPaths').textContent = paths.length;
+            document.getElementById('statLines').textContent = lines.length;
+        }
+    </script>
+
+    <script>
+        // ========== 报告生成 ==========
+        function generateReport() {
+            const objects = fabricCanvas.getObjects().filter(obj => obj.markerType === 'path' || obj.markerType === 'line');
+
+            if (objects.length === 0 && !calibrationData.calibrated) {
+                document.getElementById('clinicalDesc').value = '暂无数据，请先标定伤口尺并标记伤口。';
+                return;
+            }
+
+            let text = '【伤口评估报告】\n';
+            text += '— ' + new Date().toLocaleString() + ' —\n';
+
+            if (calibrationData.calibrated) {
+                text += '📏 标定比例：1cm = ' + calibrationData.pixelsPerCm.toFixed(0) + 'px\n';
+            } else {
+                text += '⚠️ 未标定伤口尺，尺寸单位为像素\n';
+            }
+
+            if (objects.length > 0) {
+                text += '📋 标记列表：\n';
+                objects.forEach((obj, index) => {
+                    const name = obj.name || '未命名_' + (index + 1);
+                    const type = obj.markerType === 'line' ? '测量线' : '边界标记';
+                    const color = obj.stroke || '未设置';
+
+                    text += (index + 1) + '. ' + name + ' (' + type + ')\n';
+
+                    const bounds = measureObject(obj);
+                    if (bounds) {
+                        if (obj.markerType === 'line') {
+                            if (calibrationData.calibrated) {
+                                text += '   长度：' + (bounds.length / calibrationData.pixelsPerCm).toFixed(1) + ' cm\n';
+                            } else {
+                                text += '   长度：' + bounds.length.toFixed(0) + ' px\n';
+                            }
+                        } else {
+                            if (calibrationData.calibrated) {
+                                text += '   尺寸：' + (bounds.width / calibrationData.pixelsPerCm).toFixed(1) + ' x ' +
+                                    (bounds.height / calibrationData.pixelsPerCm).toFixed(1) + ' cm\n';
+                                text += '   面积：' + (bounds.area / (calibrationData.pixelsPerCm * calibrationData.pixelsPerCm)).toFixed(1) + ' cm²\n';
+                                text += '   周长：' + (bounds.perimeter / calibrationData.pixelsPerCm).toFixed(1) + ' cm\n';
+                            } else {
+                                text += '   尺寸：' + bounds.width.toFixed(0) + ' x ' + bounds.height.toFixed(0) + ' px\n';
+                                text += '   面积：' + bounds.area.toFixed(0) + ' px²\n';
+                                text += '   周长：' + bounds.perimeter.toFixed(0) + ' px\n';
+                            }
+                        }
+                    }
+                    text += '   颜色：' + color + '\n';
+                });
+            }
+
+            document.getElementById('clinicalDesc').value = text;
+        }
+
+        function copyReport() {
+            const text = document.getElementById('clinicalDesc').value;
+            if (!text || text === '暂无数据，请先标定伤口尺并标记伤口。') {
+                alert('请先生成报告');
+                return;
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('✅ 报告已复制到剪贴板');
+                }).catch(() => {
+                    fallbackCopyReport();
+                });
+            } else {
+                fallbackCopyReport();
+            }
+        }
+
+        function fallbackCopyReport() {
+            const textarea = document.getElementById('clinicalDesc');
+            textarea.removeAttribute('readonly');
+            textarea.select();
+            textarea.setSelectionRange(0, textarea.value.length); // iOS 兼容
+            try {
+                document.execCommand('copy');
+                alert('✅ 报告已复制到剪贴板');
+            } catch (err) {
+                alert('复制失败，请长按文本手动复制');
+            }
+            textarea.setAttribute('readonly', 'readonly');
+            window.getSelection()?.removeAllRanges();
+        }
+
+        // ========== 导出图片（移动端优先使用系统分享） ==========
+        function exportImage() {
+            const activeObj = fabricCanvas.getActiveObject();
+            fabricCanvas.discardActiveObject();
+            removeMeasureLines();
+            fabricCanvas.renderAll();
+
+            const dataURL = fabricCanvas.toDataURL({
+                format: 'png',
+                quality: 1,
+                multiplier: 2
+            });
+
+            const fileName = '伤口标记图_' + Date.now() + '.png';
+
+            // 移动端：优先调用系统分享（可保存到相册/发送到微信等）
+            if (isTouchDevice && navigator.canShare) {
+                try {
+                    const arr = dataURL.split(',');
+                    const mime = arr[0].match(/:(.*?);/)[1];
+                    const bstr = atob(arr[1]);
+                    let n = bstr.length;
+                    const u8arr = new Uint8Array(n);
+                    while (n--) u8arr[n] = bstr.charCodeAt(n);
+                    const file = new File([u8arr], fileName, { type: mime });
+
+                    if (navigator.canShare({ files: [file] })) {
+                        navigator.share({ files: [file], title: '伤口标记图' }).catch(() => { });
+                        if (activeObj) fabricCanvas.setActiveObject(activeObj);
+                        return;
+                    }
+                } catch (err) {
+                    // 分享不可用时回退到下载
+                }
+            }
+
+            const link = document.createElement('a');
+            link.download = fileName;
+            link.href = dataURL;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            if (activeObj) {
+                fabricCanvas.setActiveObject(activeObj);
+            }
+        }
+
+        // ========== 键盘快捷键（桌面端） ==========
+        document.addEventListener('keydown', function (e) {
+            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+                return;
+            }
+
+            if (e.code === 'Space' && !isPanning) {
+                e.preventDefault();
+                isPanning = true;
+                fabricCanvas.defaultCursor = 'grab';
+            }
+
+            if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+                e.preventDefault();
+                undoLast();
+            }
+
+            if (e.key === 'Delete' || e.key === 'Backspace') {
+                if (fabricCanvas.getActiveObject()) {
+                    e.preventDefault();
+                    deleteSelected();
+                }
+            }
+
+            if (e.key === 'Escape') {
+                cancelTempLine();
+                fabricCanvas.discardActiveObject();
+                fabricCanvas.renderAll();
+                clearProperties();
+                clearMeasurement();
+                updateMarkerList();
+            }
+
+            if (e.key === '1') setTool('select');
+            if (e.key === '2') setTool('draw');
+            if (e.key === '3') setTool('line');
+            if (e.key === '4') setTool('calibrate');
+            if (e.key === '5') setTool('delete');
+        });
+
+        document.addEventListener('keyup', function (e) {
+            if (e.code === 'Space') {
+                isPanning = false;
+                lastPos = null;
+                fabricCanvas.defaultCursor = currentTool === 'delete' ? 'not-allowed' :
+                    (currentTool === 'line' || currentTool === 'calibrate') ? 'crosshair' : 'default';
+            }
+        });
+
+        // ========== 更新绘制样式 ==========
+        function updateDrawStyle() {
+            if (currentTool === 'draw') {
+                const style = getDrawStyle();
+                fabricCanvas.freeDrawingBrush.color = style.stroke;
+                fabricCanvas.freeDrawingBrush.width = style.strokeWidth;
+                fabricCanvas.freeDrawingBrush.strokeDashArray = style.strokeDashArray;
+            }
+        }
+
+        function updateMeasureColor() {
+            currentMeasureColor = document.getElementById('measureColor').value;
+
+            measureLines.forEach(line => {
+                if (line.type === 'text') {
+                    line.set('fill', currentMeasureColor);
+                } else {
+                    line.set('stroke', currentMeasureColor);
+                    line.set('fill', currentMeasureColor);
+                }
+            });
+            fabricCanvas.renderAll();
+        }
+
+        function updateMeasureStyle() {
+            const fontSize = parseInt(document.getElementById('measureFontSize').value) || 12;
+            measureLines.forEach(line => {
+                if (line.type === 'text') {
+                    line.set('fontSize', fontSize);
+                }
+            });
+            fabricCanvas.renderAll();
+        }
+
+        // ========== 缩放功能 ==========
+        let currentZoom = 1;
+
+        function zoomIn() { currentZoom = Math.min(currentZoom * 1.2, 15); applyZoom(); }
+        function zoomOut() { currentZoom = Math.max(currentZoom / 1.2, 0.2); applyZoom(); }
+
+        function applyZoom() {
+            const zoomPoint = new fabric.Point(fabricCanvas.width / 2, fabricCanvas.height / 2);
+            fabricCanvas.zoomToPoint(zoomPoint, currentZoom);
+            document.getElementById('zoomLevel').textContent = Math.round(currentZoom * 100) + '%';
+            fabricCanvas.renderAll();
+        }
+
+        function fitToCanvas() {
+            if (!backgroundImage) return;
+            const scaleX = fabricCanvas.width / (backgroundImage.width * backgroundImage.scaleX);
+            const scaleY = fabricCanvas.height / (backgroundImage.height * backgroundImage.scaleY);
+            const scale = Math.min(scaleX, scaleY) * 0.9;
+            fabricCanvas.setViewportTransform([scale, 0, 0, scale, 0, 0]);
+            currentZoom = scale;
+            document.getElementById('zoomLevel').textContent = Math.round(currentZoom * 100) + '%';
+            fabricCanvas.renderAll();
+        }
+
+        function resetZoom() {
+            currentZoom = 1;
+            fabricCanvas.setViewportTransform([1, 0, 0, 1, 0, 0]);
+            document.getElementById('zoomLevel').textContent = '100%';
+            fabricCanvas.renderAll();
+        }
+
+        // 滚轮缩放（桌面端）
+        fabricCanvas.on('mouse:wheel', function (opt) {
+            const delta = opt.e.deltaY > 0 ? 0.9 : 1.1;
+            const pointer = fabricCanvas.getPointer(opt.e);
+            let newZoom = fabricCanvas.getZoom() * delta;
+            newZoom = Math.max(0.2, Math.min(15, newZoom));
+            fabricCanvas.zoomToPoint({ x: pointer.x, y: pointer.y }, newZoom);
+            currentZoom = newZoom;
+            document.getElementById('zoomLevel').textContent = Math.round(currentZoom * 100) + '%';
+            opt.e.preventDefault();
+            opt.e.stopPropagation();
+        });
+
+        // ========== 画布尺寸自适应（等比缩放视口，已有标记不偏移） ==========
+        function resizeCanvas() {
+            const wrapper = document.getElementById('canvasWrapper');
+            if (!wrapper) return;
+
+            const containerWidth = wrapper.clientWidth - 24;
+            const oldW = fabricCanvas.width;
+            const oldH = fabricCanvas.height;
+
+            // 窄屏（手机竖屏）使用更高的画布比例，方便操作
+            const aspect = containerWidth < 480 ? 0.8 : (650 / 900);
+            const newW = Math.min(containerWidth, 900);
+            const newH = Math.round(newW * aspect);
+
+            if (Math.abs(newW - oldW) < 2 && Math.abs(newH - oldH) < 2) return;
+
+            const hasContent = fabricCanvas.getObjects().length > 0;
+
+            if (hasContent) {
+                // 已有内容：按比例缩放视口变换矩阵，保证标记与背景图相对位置不变
+                const s = newW / oldW;
+                const vpt = fabricCanvas.viewportTransform;
+                vpt[0] *= s; vpt[3] *= s;
+                vpt[4] *= s; vpt[5] *= s;
+            }
+
+            fabricCanvas.setWidth(newW);
+            fabricCanvas.setHeight(newH);
+            fabricCanvas.calcOffset();
+
+            if (!hasContent) {
+                // 空画布：保持 100% 视图
+                fabricCanvas.setViewportTransform([1, 0, 0, 1, 0, 0]);
+            }
+
+            currentZoom = fabricCanvas.getZoom();
+            document.getElementById('zoomLevel').textContent = Math.round(currentZoom * 100) + '%';
+            fabricCanvas.renderAll();
+        }
+
+        let resizeTimer = null;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resizeCanvas, 150);
+        });
+
+        // 监听容器尺寸变化（含屏幕旋转、分屏等场景）
+        if (window.ResizeObserver) {
+            const ro = new ResizeObserver(function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(resizeCanvas, 150);
+            });
+            ro.observe(document.getElementById('canvasWrapper'));
+        }
+
+        window.addEventListener('orientationchange', function () {
+            setTimeout(resizeCanvas, 300);
+        });
+
+        // ========== 初始化 ==========
+        setTool('select');
+        updateStats();
+        updateHint();
+        resizeCanvas();
+        setTimeout(resizeCanvas, 100);
+
+        updateNameStyle();
+        updateAreaStyle();
+        console.log('🩺 伤口标记与测量工具 v3.0 全平台适配版已加载');
+        if (isTouchDevice) {
+            console.log('💡 触屏操作: 单指绘制/选择 | 双指捏合缩放 | 双指平移 | 拖拽画直线 | 双击标记重命名');
+        } else {
+            console.log('💡 快捷键: 1=选择 | 2=绘制 | 3=直线 | 4=标定 | 5=删除 | Ctrl+Z=撤销 | 空格=拖拽画布');
+        }
+    </script>
+</body>
+
+</html>
+
+      </div>
+      
+      
+      
+    </div>
+  <ul class="breadcrumb">
+            <li><a href="/scale/">SCALE</a></li>
+          <li>WOUNDMARKER</li>
+  </ul>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">沪ICP备2026044472号-1 </a>
+      <img src="/images/beian.png" alt=""><a href="https://beian.mps.gov.cn/#/query/webSearch?code=31010402337157" rel="noopener" target="_blank">沪公网安备31010402337157号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">JL</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

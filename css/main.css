@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #82bdff;
+  background: #7477b0;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -1789,6 +1789,11 @@ pre code {
   color: #f00;
   display: inline-block;
   margin: 0 5px;
+}
+.beian img {
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
 }
 .busuanzi-count #busuanzi_container_site_uv {
   display: none;
@@ -2739,4 +2744,12 @@ header.header {
 .menu-item a {
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+/* 调整页脚公安备案图标的大小 */
+.footer .beian img {
+  width: 16px !important;
+  height: 16px !important;
+  vertical-align: middle;
+/* 稍微调整间距，让它和文字离得更近一些 */
+  margin: 0 4px;
 }
